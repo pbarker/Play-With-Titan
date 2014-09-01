@@ -4,19 +4,8 @@ import play.api.libs.json.{JsString, JsValue, Json}
 import play.api.mvc._
 import play.api.libs.iteratee.{Iteratee, Concurrent, Enumerator}
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.Future
-import scala.concurrent.duration.DurationInt
-import play.api.Logger
-import play.api.libs.concurrent.{Akka, Promise}
-import java.io.File
-import play.api.libs.ws.WS
-import akka.actor.{Props, Actor}
-import akka.pattern.ask
-import java.util.concurrent.TimeoutException
-import play.api.Play.current
 import play.api.Logger
 import com.tinkerpop.gremlin.scala._
-import com.tinkerpop.gremlin.Tokens.T._
 import com.thinkaurelius.titan.core.attribute.Text._
 
 object Ws extends Controller {

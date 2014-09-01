@@ -1,44 +1,21 @@
 package controllers
 
-import com.thinkaurelius.titan.core.Multiplicity
+
 import com.thinkaurelius.titan.core.TitanFactory
-import com.thinkaurelius.titan.core.TitanGraph
-import com.thinkaurelius.titan.core.attribute.Geoshape
-import com.thinkaurelius.titan.example.GraphOfTheGodsFactory
-import com.tinkerpop.blueprints.util.ElementHelper
 import com.tinkerpop.blueprints._
 import com.thinkaurelius.titan.core.TitanGraph
-import com.thinkaurelius.titan.core._
-
-//import com.ansvia.graph.BlueprintsWrapper._
-import com.thinkaurelius.titan.core._
 import com.tinkerpop.gremlin.scala._
-import com.thinkaurelius.titan.core.attribute._
-import com.thinkaurelius.titan.tinkerpop.gremlin._
-import com.thinkaurelius.titan.graphdb.blueprints._
-import com.tinkerpop.gremlin.java._
 import models._
 import org.apache.commons.configuration.BaseConfiguration
-import play.api._
-import com.tinkerpop.blueprints.Direction
-import com.tinkerpop.blueprints.Direction._
 import play.api.Logger
 import play.api.libs.json._
-import play.api.data._
-import play.api.data.Forms._
 import play.api.mvc._
-import play.api.Play.current
-import play.api.mvc.BodyParsers._
 import play.api.libs.json.Json
 import play.api.libs.json.Json._
-import scala.collection.JavaConverters._
 import play.api.libs.functional.syntax._
-import com.thinkaurelius.titan.diskstorage.es.ElasticSearchIndex
 import com.thinkaurelius.titan.core.attribute.Text._
-
 import models.Person
 
-import scala.util.parsing.json.JSONArray
 
 //Atlas object is the graph configuration
 object Atlas {
