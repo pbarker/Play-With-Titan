@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Play With Titan</title>
+
+        <script src="assets/js/vivagraph.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="@routes.Assets.at("jquery-ui/jquery-ui.css")">
+        <script src="@routes.Assets.at("jquery-ui/jquery-ui.js")"></script>
+
+        <script type='text/javascript' src="@routes.Assets.at("js/graph.js")"></script>
+        <script type='text/javascript' src="@routes.Assets.at("js/forms.js")"></script>
+        <script type='text/javascript' src="@routes.Assets.at("js/autocomplete.js")"></script>
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/socket.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("bootstrap3/css/bootstrap.css")">
+    </head>
+
+    <body>
+        <div id="container" class="container">
+            <div id="conFig">
+                <div id="button">
+                    <button id="loadButton" type="button" class="btn btn-primary btn-lg" onclick="onLoad()">Start Graph!</button>
+                </div>
+                <div id="createVert">
+                    <h3>Create a new person</h3>
+                    <form id="person">
+                        <label for="bar">Name</label>
+                        <div id="nameError"><input id="name" name="name" type="text" value="" autocomplete="off"/></div> <br />
+                        <label for="age">Age</label>
+                        <div id="ageError"><input id="age" name="age" type="text" value="" autocomplete="off"/></div> <br />
+                        <div id="vertSubmit"> <input id="vertButton" type="submit" value="Add" /><div id="vertResult"></div> </div>
+                    </form>
+                </div>
+                <div id="createEdge">
+                    <h3>Create a new relation</h3>
+                    <form id="edge">
+                        <label for="name1">Name</label>
+                        <div id="name1Error"><input id="name1" name="name1" type="text" value="" autocomplete="off" /></div> <br />
+                        <label for="relation">Relation</label>
+                        <div id="relationError"><input id="relation" name="relation" type="text" value="" autocomplete="off" /></div> <br />
+                        <label for="name2">Name</label>
+                        <div id="name2Error"><input id="name2" name="name2" type="text" value="" autocomplete="off" /></div> <br />
+                        <div id="edgeSubmit"><input type="submit"  id="edgeButton" value="Add" /><div id="edgeResult"></div></div>
+                    </form>
+                </div>
+            </div>
+            <div id='graphContainer'><div id="nodeInfo"></div></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET         /                          controllers.Application.index
+
+GET         /gremlinVerticies          controllers.Application.gremlinVerticies
+
+GET         /vertProps                 controllers.Application.vertProps
+
+GET         /gremlinEdges              controllers.Application.gremlinEdges
+
+GET         /jsonVerticies             controllers.Application.jsonVerticies
+
+GET         /jsonEdges                 controllers.Application.jsonEdges
+
+GET         /findVertex                controllers.Application.findVertex
+
+GET         /getDirect                 controllers.Application.getDirect
+
+POST        /receiveForm               controllers.Application.receiveForm
+
+POST        /saveVert                  controllers.Application.saveVert
+
+POST        /saveEdge                  controllers.Application.saveEdge
+
+GET         /Echo                      controllers.Ws.Echo()
+
+GET         /ws                        controllers.Application.ws()
+
+GET         /callIndex                 controllers.Application.callIndex()
+
+GET         /esTest                    controllers.Application.esTest()
+
+
+# Map static resources from the /public folder to the /assets URL path
+
+GET         /assets/*file              controllers.Assets.at(path="/public", file)

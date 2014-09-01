@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>"Websockets'</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    </head>
+    <body>
+      <h2>Echo a phrase</h2>
+      <button id="send">Click to send message</button>
+    </body>
+    <script>
+
+        //just a Websocket test script!
+
+
+        $(document).ready(function(){
+            //Open a WebSocket connection.
+            var wsUri = "/echo";
+
+            var websocket = new WebSocket("ws://localhost:9000/wsWithActor");
+
+            //Connected to server
+            websocket.onopen = function(ev) {
+            alert('Connected to server ');
+            }
+
+            //Connection close
+            websocket.onclose = function(ev) {
+            alert('Disconnected');
+            };
+
+            //Message Receved
+            websocket.onmessage = function(ev) {
+            alert('Message '+ev.data);
+            };
+
+            //Error
+            websocket.onerror = function(ev) {
+            alert('Error '+ev.data);
+            };
+
+            //Send a Message
+            $('#send').click(function(){
+            var mymessage = 'This is a test message';
+            websocket.send(mymessage);
+            });
+        });
+    </script>
+</html>
