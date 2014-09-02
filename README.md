@@ -5,7 +5,7 @@ Basic setup with visualizer; using Titan Graph, Elasticsearch, Play, Gremlin-Sca
 
 TODO:
 
--Implement front end in React.js
--Add transaction handling
--Add MySQL as a secondary story
--Test against neo4j
+-Implement front end in React.js <br/>
+-Add transaction handling <br />
+-Add MySQL as a secondary story <br />
+-Test against neo4j <br />
