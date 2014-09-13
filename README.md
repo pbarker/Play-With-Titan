@@ -7,5 +7,5 @@ TODO:
 
 -Implement front end in React.js <br/>
 -Add transaction handling <br />
--Add MySQL as a secondary story <br />
+-Add MySQL as a secondary store <br />
 -Test against neo4j <br />
